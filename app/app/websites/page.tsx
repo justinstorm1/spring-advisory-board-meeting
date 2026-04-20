@@ -63,7 +63,7 @@ export default function Page() {
         
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {websites.map((website, index) =>(
-                        <Card key={index} className="relative p-0 group hover:scale-500">
+                        <Card key={index} className="relative p-0 group">
                             <img 
                                 src={website.image}
                                 className="w-full h-full object-center object-fit"
