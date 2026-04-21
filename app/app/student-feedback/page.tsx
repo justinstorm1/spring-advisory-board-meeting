@@ -45,6 +45,11 @@ const feedbacks = [
             <span>Shadcn</span>
           </a>
         </Button>
+        <Button className="text-foreground" variant={'link'} asChild>
+          <a href="https://convex.dev/" target="_blank">
+            <span>Convex</span>
+          </a>
+        </Button>
       </ItemActions>
     )
   },
