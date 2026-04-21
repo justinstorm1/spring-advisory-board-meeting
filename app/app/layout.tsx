@@ -12,7 +12,12 @@ const inter = Inter({subsets:['latin'],variable:'--font-sans'})
 
 export const metadata: Metadata = {
   title: "Spring Advisory Board Meeting",
-  description: "FTHS Website Showcase"
+  description: "FTHS Website Showcase",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/images/wdpplogo.png",
+    shortcut: "/images/wdpplogo.png"
+  }
 }
 
 const fontMono = Geist_Mono({
