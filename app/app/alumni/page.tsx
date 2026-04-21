@@ -1,14 +1,17 @@
 import { GraduationCap, BookOpen } from "lucide-react"
 
 const colleges = [
-    { name: "Brookdale Community College", abbr: "BCC", color: "bg-sky-50 text-sky-700 border-sky-200" },
-    { name: "Kutztown University", abbr: "KU", color: "bg-violet-50 text-violet-700 border-violet-200" },
-    { name: "Los Angeles Film School", abbr: "LAFS", color: "bg-rose-50 text-rose-700 border-rose-200" },
-    { name: "New Jersey Institute of Technology", abbr: "NJIT", color: "bg-red-50 text-red-700 border-red-200" },
-    { name: "New York University", abbr: "NYU", color: "bg-purple-50 text-purple-700 border-purple-200" },
-    { name: "Rutgers University", abbr: "RU", color: "bg-red-50 text-red-700 border-red-200" },
-    { name: "The College of New Jersey", abbr: "TCNJ", color: "bg-amber-50 text-amber-700 border-amber-200" },
-    { name: "Yale University", abbr: "YU", color: "bg-blue-50 text-blue-700 border-blue-200" },
+    { name: "Brookdale Community College", abbr: "BCC" },
+    { name: "Kutztown University", abbr: "KU" },
+    { name: "Los Angeles Film School", abbr: "LAFS" },
+    { name: "New Jersey Institute of Technology" },
+    { name: "New York University", abbr: "NYU" },
+    { name: "Rutgers University", abbr: "RU" },
+    { name: "The College of New Jersey", abbr: "TCNJ" },
+    { name: "Yale University", abbr: "YU" },
+    { name: "Rowan University", abbr: "ROW" },
+    { name: "Drew University", abbr: "DU" },
+    { name: "Rochester Institute of Technology", abbr: "RIT" },
 ];
 
 const majors = [
@@ -25,7 +28,14 @@ const majors = [
     "Mechanical Engineering",
     "Neuroscience",
     "Video Production",
+
+    // Added
+    "Radio, TV, and Film Production",
+    "Physics Engineering",
+    "Game Design",
+    "Graphic Design",
 ];
+
 
 export default function Page() {
     return (
@@ -57,7 +67,7 @@ export default function Page() {
                                 key={college.name}
                                 className="group flex items-center gap-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 py-3 hover:border-blue-200 hover:shadow-sm transition-all duration-150 cursor-default"
                             >
-                                <div className={`flex-shrink-0 w-9 h-9 rounded-lg border text-xs font-black flex items-center justify-center ${college.color}`}>
+                                <div className={`flex-shrink-0 w-9 h-9 rounded-lg border text-xs font-black flex items-center justify-center`}>
                                     {college.abbr}
                                 </div>
                                 <span className="text-sm font-medium text-gray-800 dark:text-gray-200 leading-snug">

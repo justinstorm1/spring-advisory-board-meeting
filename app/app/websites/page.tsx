@@ -25,12 +25,6 @@ const websites = [
         link: "https://jzapdos.github.io/Crossy-Road/"
     },
     {
-        student: "Justin Storm",
-        name: "LSC Project",
-        image: "/images/jslsc.png",
-        link: "https://libertysciencecenter.vercel.app/"
-    },
-    {
         student: "Jayden Baird Azore",
         name: "SLE Project",
         image: "/images/jbasleproject.png",
@@ -41,7 +35,13 @@ const websites = [
         name: "Slot Machine",
         image: "/images/zhslot.png",
         link: "https://tornado2007.github.io/slot-machine-game/"
-    }
+    },
+    {
+        student: "Justin Storm",
+        name: "LSC Project",
+        image: "/images/jslsc.png",
+        link: "https://libertysciencecenter.vercel.app/"
+    },
 ];
 
 export default function Page() {
