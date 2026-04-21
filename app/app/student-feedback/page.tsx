@@ -1,13 +1,9 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Item, ItemContent, ItemMedia } from "@/components/ui/item"
+import { Item, ItemActions, ItemContent, ItemMedia } from "@/components/ui/item"
 
 const feedbacks = [
-  {
-    name: "Justin Storm",
-    initials: "JS",
-    message: "This class truly changed my perspective on technology. From not knowing how to code, I learned HTML, CSS, and JS, as well with the advanced framework Next.js utilizing React. With those frameworks, I began developing skills building mobile applications using React Native and Swift.",
-  },
   {
     name: "Michael Volpe",
     initials: "MV",
@@ -27,6 +23,30 @@ const feedbacks = [
     name: "Zeidy Hernandez",
     initials: "ZH",
     message: "This class was life changing with how much people were involved with eachother and how much you learn in this class.",
+  },
+  {
+    name: "Justin Storm",
+    initials: "JS",
+    message: "This class truly changed my perspective on technology. From not knowing how to code, I learned HTML, CSS, and JS, as well with the advanced framework Next.js utilizing React. With those frameworks, I began developing skills building mobile applications using React Native and Swift.",
+    buttons: (
+      <ItemActions>
+        <Button className="text-foreground" variant={'link'} asChild>
+          <a href="https://ui.shadcn.com/" target="_blank">
+            <span>Shadcn</span>
+          </a>
+        </Button>
+        <Button className="text-foreground" variant={'link'} asChild>
+          <a href="https://react.dev/" target="_blank">
+            <span>React</span>
+          </a>
+        </Button>
+        <Button className="text-foreground" variant={'link'} asChild>
+          <a href="https://nextjs.org/" target="_blank">
+            <span>Next.js</span>
+          </a>
+        </Button>
+      </ItemActions>
+    )
   },
 ]
 
@@ -63,6 +83,7 @@ export default function Page() {
                   <p className="font-semibold text-sm mb-1">{item.name}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.message}</p>
                 </div>
+                {item.buttons}
               </ItemContent>
             </Item>
           ))}
