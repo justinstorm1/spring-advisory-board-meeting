@@ -31,11 +31,6 @@ const feedbacks = [
     buttons: (
       <ItemActions>
         <Button className="text-foreground" variant={'link'} asChild>
-          <a href="https://ui.shadcn.com/" target="_blank">
-            <span>Shadcn</span>
-          </a>
-        </Button>
-        <Button className="text-foreground" variant={'link'} asChild>
           <a href="https://react.dev/" target="_blank">
             <span>React</span>
           </a>
@@ -43,6 +38,11 @@ const feedbacks = [
         <Button className="text-foreground" variant={'link'} asChild>
           <a href="https://nextjs.org/" target="_blank">
             <span>Next.js</span>
+          </a>
+        </Button>
+        <Button className="text-foreground" variant={'link'} asChild>
+          <a href="https://ui.shadcn.com/" target="_blank">
+            <span>Shadcn</span>
           </a>
         </Button>
       </ItemActions>
