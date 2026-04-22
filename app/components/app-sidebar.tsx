@@ -97,7 +97,7 @@ export default function AppSidebar() {
                                 <SidebarMenuItem key={index}>
                                     <SidebarMenuButton size={'lg'} tooltip={game.name} asChild>
                                         <a target="_blank" href={game.link}>
-                                            <div className="h-full flex items-center justify-center bg-red-400 aspect-square">
+                                            <div className="h-full flex items-center justify-center aspect-square">
                                                 <Gamepad2 />
                                             </div>
                                             <div className="shrink-1 flex flex-col">
