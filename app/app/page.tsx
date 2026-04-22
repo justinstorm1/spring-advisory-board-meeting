@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Item, ItemActions, ItemContent, ItemDescription, ItemMedia, ItemTitle } from "@/components/ui/item"
 import { SidebarTrigger } from "@/components/ui/sidebar"
-import { BookOpen, Mail, Users, UserStar } from "lucide-react"
+import { BookOpen, Mail, Play, Users, UserStar } from "lucide-react"
 
 const teacher = {
   name: "Megan Herbert",
@@ -140,6 +140,7 @@ export default function Page() {
             ))}
           </div>
         </div>
+
 
       </div>
 

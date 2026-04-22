@@ -1,7 +1,7 @@
 "use client";
 
-import { AppWindow, GraduationCap, Home, LucideIcon, MessageSquare, Tv, Tv2 } from "lucide-react";
-import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton } from "./ui/sidebar";
+import { AppWindow, Gamepad2, GraduationCap, Home, LucideIcon, MessageSquare, Play, Tv, Tv2 } from "lucide-react";
+import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "./ui/sidebar";
 import { useParams, usePathname } from "next/navigation";
 
 interface Page {
@@ -34,7 +34,20 @@ export default function AppSidebar() {
             title: "Student Feedback",
             href: "/student-feedback"
         },
-    ] 
+    ];
+
+    const games = [
+        {
+            name: "Would You Rather",
+            student: "Justin Storm",
+            link: "https://justinstorm1-react-test.vercel.app/"
+        },
+        {
+            name: "Shape Escape",
+            student: "Michael Volpe",
+            link: "https://michael-volpe.github.io/Shape-Escape-V2/"
+        }
+    ]
 
     return (
         <Sidebar collapsible="icon">
@@ -69,6 +82,31 @@ export default function AppSidebar() {
                                         )}
                                     </a>
                                 </SidebarMenuButton>
+                            ))}
+                        </SidebarMenu>
+                    </SidebarGroupContent>
+                </SidebarGroup>
+                <SidebarGroup>
+                    <SidebarGroupContent>
+                        <SidebarGroupLabel>
+                            Games 
+                            <span className="ms-auto">{games.length}</span>
+                        </SidebarGroupLabel>
+                        <SidebarMenu>
+                            {games.map((game, index) => (
+                                <SidebarMenuItem key={index}>
+                                    <SidebarMenuButton size={'lg'} tooltip={game.name} asChild>
+                                        <a target="_blank" href={game.link}>
+                                            <div className="h-full flex items-center justify-center bg-red-400 aspect-square">
+                                                <Gamepad2 />
+                                            </div>
+                                            <div className="shrink-1 flex flex-col">
+                                                <span>{game.name}</span>
+                                                <span className="text-xs text-muted-foreground">{game.student}</span>
+                                            </div>
+                                        </a>
+                                    </SidebarMenuButton>
+                                </SidebarMenuItem>
                             ))}
                         </SidebarMenu>
                     </SidebarGroupContent>
